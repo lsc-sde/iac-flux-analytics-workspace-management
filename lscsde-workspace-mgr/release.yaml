@@ -1,0 +1,29 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: keda
+  namespace: lscsde-workspace-mgr
+  annotations:
+    xlscsde.nhs.uk/flux-branch: ${analytics_workspace_management_branch}
+spec:
+  targetNamespace: lscsde-workspace-mgr
+  releaseName: analytics-workspace-management
+  chart:
+    spec:
+      chart: analytics-workspace-management
+      version: ${analytics_workspace_management_chart_version}
+      sourceRef:
+        kind: HelmRepository
+        name: analytics-workspace-management
+        namespace: lscsde-workspace-mgr
+  interval: 5m0s
+  install:
+    remediation:
+      retries: -1
+    disableWait: true
+    disableWaitForJobs: true
+  upgrade:
+    remediation:
+      retries: -1
+    disableWait: true
+    disableWaitForJobs: true
