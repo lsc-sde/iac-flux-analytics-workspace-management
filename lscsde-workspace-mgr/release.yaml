@@ -1,7 +1,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: keda
+  name: analytics-workspace-management
   namespace: lscsde-workspace-mgr
   annotations:
     xlscsde.nhs.uk/flux-branch: ${analytics_workspace_management_branch}
