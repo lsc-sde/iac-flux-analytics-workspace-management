@@ -31,3 +31,16 @@ spec:
     matchLabels: {}
   policyTypes:
   - Egress
+---
+apiVersion: crd.projectcalico.org/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-api-access
+spec:
+  selector: all()
+  egress:
+    - action: Allow
+      destination:
+        services:
+          name: kubernetes
+          namespace: default
