@@ -2,7 +2,7 @@
 Flux Configuration for LSC Analytics Workspace Management
 
 ## Developer Guide
-This flux configuration will be created by the [Core LSCSDE Helm Chart]((https://github.com/lsc-sde/iac-helm-lscsde-flux), which in turn is called by the [Core LSCSDE Flux configuration](https://github.com/lsc-sde/iac-flux-lscsde)
+This flux configuration will be created by the [Core LSCSDE Helm Chart](https://github.com/lsc-sde/iac-helm-lscsde-flux), which in turn is called by the [Core LSCSDE Flux configuration](https://github.com/lsc-sde/iac-flux-lscsde)
 
 When the main branch of this repository is created it will trigger a github action which will:
 * Calculate a semver version number
