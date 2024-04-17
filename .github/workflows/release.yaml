@@ -11,5 +11,5 @@ jobs:
     uses: lsc-sde/lsc-sde/.github/workflows/flux-release.yaml@main
     with:
       directory: iac/flux/analytics-workspace-management
-      yamlPath: analytics_workspace_management_branch
+      yamlPath: analytics_workspace_management
     secrets: inherit
