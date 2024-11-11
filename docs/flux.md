@@ -2,7 +2,6 @@
 title: FluxCD
 parent: AWMS
 layout: page
-grand_parent: Components
 ---
 
 The FluxCD Configuration for the analytics workspace management solution.
