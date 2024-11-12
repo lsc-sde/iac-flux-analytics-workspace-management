@@ -1,6 +1,7 @@
 ---
 title: FluxCD
-parent: AWMS
+parent: Analytics Workspace Management Services
+grand_parent: Architecture
 layout: page
 ---
 
