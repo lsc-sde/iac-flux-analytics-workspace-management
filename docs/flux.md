@@ -11,8 +11,15 @@ This will create a helm release targeted at the [helm chart for the Analytics Wo
 
 ## Network Policies
 
+```mermaid
+flowchart LR
+    nginx([all services]) -->|Ingress HTTPS| portal[Management Portal] 
+    portal -->|Egress HTTPS| kubernetes[[Kubernetes API]]
+    portal -->|Egress DNS| coredns
+```
+
 | Direction | Ports/Type | Description |
 | --- | --- | --- |
 | Ingress | All | Allows all traffic inbound. TODO: This needs to be refined |
 | Egress | TCP/UDP 53 | Allows traffic for DNS ports |
-| Egress | kubernetes service | Allows access to the kubernetes service to allow Kubernetes API Access |
+| Egress | HTTPS | Allows access to the kubernetes service to allow Kubernetes API Access |
